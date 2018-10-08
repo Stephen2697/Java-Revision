@@ -1,5 +1,7 @@
 package com.stephen.revision.java;
 
+
+
 public class Control {
 
 	public static void main(String[] args)
@@ -22,8 +24,8 @@ public class Control {
 		Person amy = new Person("Amy", 'F');
 		
 		//Instantiate objects
-		Student alex = new Student("Alex", 'M', "c16377111");
-		Student anna = new Student("Anna", 'F', "c16377999");
+		Student alex = new Student("Alex", 'M');
+		Student anna = new Student("Anna", 'F');
 		
 		
 		System.out.println("\nobj" + i + ": " + stephen);
@@ -33,6 +35,22 @@ public class Control {
 		System.out.println("obj" + i + ": " + alex);
 		i++;
 		System.out.println("obj" + i + ": " + anna);
+		
+		for (int t=0; t<30; t++)
+			System.out.print("-");
+		
+		System.out.println("\nInterface Behaviour");
+		
+		for (int t=0; t<30; t++)
+			System.out.print("=");
+		
+		//Call interfaces
+		alex.confirmDetails();
+		alex.getCourseCode();
+		
+		anna.confirmDetails();
+		anna.getCourseCode();
+		
 		
 		
 	}

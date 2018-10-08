@@ -1,24 +1,35 @@
 package com.stephen.revision.java;
 
-public class Student extends Person {
+import java.util.UUID;
 
-	String studentId;
+public class Student extends Person implements PublishDetails {
+
+	private String studentID;
+	private String courseID = "DT228";
+	static String studentIDCounter = UUID.randomUUID().toString();
 	
-	Student(String x, char y, String z)
+	
+	
+	Student(String x, char y)
 	{
 		super(x, y);
-		setID(z);
+		setID(createNewID());
 		
 	}
 	
 	void setID(String ID)
 	{
-		this.studentId = ID;
+		this.studentID = ID;
 	}
 	
 	String getID()
 	{
-		return this.studentId;
+		return this.studentID;
+	}
+	
+	String getCourse()
+	{
+		return this.courseID;
 	}
 	
 	public String toString()
@@ -26,4 +37,21 @@ public class Student extends Person {
 		return super.toString() + ", "  + getID() + "." ;
 	}
 	
+	//print out name
+	public void confirmDetails()
+	{
+		System.out.print("\n" + this.getName());
+	}
+	
+	//print out course code
+	public void  getCourseCode()
+	{
+		System.out.println("." + this.getCourse());
+	}
+	
+	public String createNewID()
+	{
+		
+		return UUID.randomUUID().toString();
+	}
 }
