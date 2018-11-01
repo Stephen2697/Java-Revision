@@ -57,13 +57,13 @@ public class Student extends Person implements PublishDetails {
 	//Method to Output Instance object's 'name' variable to console
 	public void confirmDetails()
 	{
-		System.out.print("\n" + this.getName());
+		System.out.print(this.getName());
 	}
 	
 	//Method to Output Instance object's 'courseID' variable to console
 	public void  getCourseCode()
 	{
-		System.out.println("." + this.getCourse());
+		System.out.println(" Is Enrolled In Course: " + this.getCourse());
 	}
 	
 	//Method to create a UUID - 128 bit unique id upon method call

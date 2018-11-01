@@ -58,6 +58,8 @@ public class Control {
 		for (int t=0; t<30; t++)
 			System.out.print("=");
 		
+		System.out.print("\n");
+		
 		//Call interfaces on instances
 		alex.confirmDetails();
 		alex.getCourseCode();
